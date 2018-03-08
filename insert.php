@@ -2,7 +2,7 @@
 include ("db_passwords.php");
 $name=$_POST['name'];
 $email=$_POST['email'];
-$dbname = "matt_home";
+$dbname = "entrantsDB";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
