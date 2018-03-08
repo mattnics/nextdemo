@@ -1,5 +1,5 @@
 <?php
 $servername = "changeme";
-$username = "root";
+$username = "dbuser";
 $password = "nutanix/4u";
 ?>
