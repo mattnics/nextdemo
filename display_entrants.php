@@ -24,7 +24,7 @@ $sql = "SELECT * FROM emails ORDER BY id DESC LIMIT 50";
 
 $result = $conn->query($sql);
 
-echo '<p align="middle"><a href="/choose_winner.html">Pick Winner</a><br><br>';
+echo '<p align="middle"><a href="/choose_winner.php">Pick Winner</a><br><br>';
 
 if ($result->num_rows > 0) {
     // output data of each row
