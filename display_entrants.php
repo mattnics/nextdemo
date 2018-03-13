@@ -37,7 +37,7 @@
                         <h1>Current Entrants</h1>
                         <div class="description">
                                 <p>
-                                The Entrants so so far ...     <a href="/display_entrants.php" target="_blank">Click to pick a winner!!!</a>
+                                The Entrants so so far ...     <a href="/choose_winner.php" target="_blank">Click to pick a winner!!!</a>
                        <br><br>
 <?php
 include ("db_passwords.php");
