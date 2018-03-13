@@ -1,41 +1,89 @@
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Calm Demo Competition</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+                <link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+
+    </head>
+
+    <body>
+
+        <!-- Top content -->
+        <div class="top-content">
+                <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text">
+                        <div class="description">
+                                <p>
+                                And the Winner is.........
+                       <br><br>
 
 <?php
 include ("db_passwords.php");
 $dbname = "entrantsDB";
-
 $conn = new mysqli($servername, $username, $password, $dbname);
-
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-
 $sql = "SELECT DISTINCT email FROM emails order by RAND() LIMIT 1";
-
-
 $result = $conn->query($sql);
-
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
 
-    		
-            echo  '<p align="middle">And the winner is <br> <br><font size="20">';
+            echo  '<p align="middle"><font size="30">';
             sleep(5);
             echo $row["email"] ;
-
-	}
+    }
 } else {
      echo "0 results";
         }
-
 $conn->close();
 ?>
+                                </p>
+                        </div>
+                    </div>
+                </div>
 
-</body>
+
+                </div>
+        </div>
+
+
+
+
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
 </html>
